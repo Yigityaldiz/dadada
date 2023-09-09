@@ -3,8 +3,7 @@ import React from "react";
 export default function Modal3Team({
   setIsOpen3,
   setIsOpen4,
-  setWallet,
-  setStatus,
+setDao
 }) {
   // const option = (e) => {
   //   setIsOpen3(false);
@@ -36,7 +35,7 @@ export default function Modal3Team({
             </div>
             <div class="flex items-start m-2">
               <input
-                onChange={(e) => setStatus(e.target.value)}
+                onChange={(e) => setDao((prev)=>({...prev,status:e.target.value}))}
                 type="text"
                 id="base-input"
                 placeholder="status"
@@ -57,7 +56,8 @@ export default function Modal3Team({
             </div>
             <div class="flex items-start m-2">
               <input
-                onChange={(e) => setWallet(e.target.value)}
+                onChange={(e) => setDao((prev)=>({...prev,wallet:e.target.value}))}
+
                 type="text"
                 id="base-input"
                 placeholder="wallet"
